@@ -1,3 +1,32 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(81, 255, 241);
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.itallic {
+    font-style: italic;
+}
+
+footer p {
+    color: #999;
+}
+
+#firstpar {
+    color: #F00;
+}
+
+.blue {
+    color: blue;
+}
+
+.bigger {
+    font-size: 18pt;
+}
+
+.orange {
+    color: orange;
 }

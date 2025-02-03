@@ -3,14 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Engagement - Beginning CSS</title>
-    <link rel="stylesheet" href="mystyle.css">
+    <title>Engagement - CSS Selectors</title>
+    <link rel="stylesheet" href="color.css">
 </head>
 <body>
     <header>
         <h1>Engagement - CSS Selectors</h1>
     </header>
-    <nav>
-        link link link
+    <nav class="blue">
+        link <span class="underline">link</span>
+        link
     </nav>
     <main>
+        <h1>Colors</h1>
+        <p id="firstpar">Some text</p>
+        <p class="blue">Some text</p>
+        <p class="blue bigger">Some text</p>
+
+        <h3>1. List out the different ways to select an item.</h3>
+        <p>
+            By Element (p)<br>
+            By ID (id)<br>
+            By Class (class)<br>
+            By Nesting (div)
+        </p>
+
+        <h3>2. What is the difference between an ID and a Class?</h3>
+        <p class="orange">ID: Only use for one unique thing<br>
+            Class: Can use multiple times
+        </p>
+        
+        <h3>3. What is the difference between a SPAN tag and a DIV tag?</h3>
+        <p>
+        <div>
+            <p>SPAN: <span class="itallic">Use for layout and big text. <br>
+            <p>DIV: <span class="itallic"> Use for small text.
+            </span>
+        </div>
+        </p>
+
+        <h3>4. What is the difference between a DIV tag and a HEADER, MAIN, or FOOTER?</h3>
+        <p>
+            DIV: Mainly used for layout and styling (No meaning)<br>
+            Semantic tags: Define specific parts of a webpage<br>
+            HEADER: Top section of semantic tags<br>
+            MAIN: Main content semantic tags<br>
+            FOOTER: Bottom section semantic tags<br>
+        </p>
+
+        <h3>5. What are the different ways to select a color?</h3>
+        <p>
+            Hex codes (#ff0000) <br>
+            RBG (rgb(255, 87, 51)) <br>
+            RGBA  (adds transparency) <br>
+            HSL (hue, saturation, lightness) <br>
+            HSLA (adds transparency)
+        </p>
+
+    </main>
+    <footer>
+        <p>&copy; 2025 Ting Yan Ng (Yankie)</p>
+    </footer>
+    </body>
+</html>
