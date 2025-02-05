@@ -1,5 +1,6 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15pt;
     background-color: rgb(81, 255, 241);
 }
 
@@ -19,8 +20,8 @@ footer p {
     color: #F00;
 }
 
-.blue {
-    color: blue;
+.green {
+    color: rgb(9, 180, 95);
 }
 
 .bigger {
@@ -29,4 +30,8 @@ footer p {
 
 .orange {
     color: orange;
+}
+
+.pink {
+    color:rgb(255, 107, 132)
 }
