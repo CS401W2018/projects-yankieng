@@ -11,3 +11,7 @@ body {
 header {
     color: rgb(13, 130, 136);
 }
+
+.flag {
+    background: url('Hong Kong Icon 2.png') no-repeat;
+}
