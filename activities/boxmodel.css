@@ -5,9 +5,22 @@ body {
 header {
     background-color: burlywood;
     padding: 30px;
-    margin: 25px;
+    margin-bottom: 25px;
+    width: 50%;
+    overflow: visible;
+    height: 0.5cm;
 }
 
+.victoria {
+    width: 100px;
+    border: thin solid black
+    text-align: center;
+    margin: 10px auto;
+}
+
+.victoria img {
+    width 100%;
+}
 header h1 {
     border: 5px dotted #000;
 }
