@@ -6,8 +6,8 @@ body {
     background-color: #81e6e6;
 }
 
-.wrapper {
-    width: 850px;
+#wrapper {
+    width: 900px;
     height: 850px;
     margin: 0 auto;
     background: rgb(216, 216, 216);
