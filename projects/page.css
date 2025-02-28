@@ -16,7 +16,8 @@ body {
 }
 
 header {
-    padding: 0.5;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0.5px;
     text-align: center;
     color: rgb(139, 126, 126);
     text-shadow: 2px 2px 5px rgba(5, 3, 3, 0.5);
@@ -70,7 +71,7 @@ figcaption {
 }
 
 footer {
-    padding: 1;
+    padding: 1px;
     text-align: left;
     color: rgb(150, 81, 81);
 }
