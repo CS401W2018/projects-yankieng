@@ -74,4 +74,11 @@ footer {
     padding: 1px;
     text-align: left;
     color: rgb(150, 81, 81);
+    background-image: url('blue.jpg'); 
+    background-size: 47%;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-clip: content-box;
 }
+    
