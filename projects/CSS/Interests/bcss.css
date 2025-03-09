@@ -1,0 +1,37 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15pt;
+    background-color: rgb(210, 249, 238);
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.itallic {
+    font-style: italic;
+}
+
+footer p {
+    color: #999;
+}
+
+#firstpar {
+    color: #F00;
+}
+
+.green {
+    color: rgb(9, 180, 95);
+}
+
+.bigger {
+    font-size: 18pt;
+}
+
+.orange {
+    color: orange;
+}
+
+.pink {
+    color:rgb(255, 107, 132)
+}

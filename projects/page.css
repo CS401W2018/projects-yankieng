@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 15pt;
+    margin: 0;
+    padding: 0;
+    background-color: #81e6e6;
+}
+
+#wrapper {
+    width: 900px;
+    height: 850px;
+    margin: 0 auto;
+    background: rgb(216, 216, 216);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0.5px;
+    text-align: center;
+    color: rgb(139, 126, 126);
+    text-shadow: 2px 2px 5px rgba(5, 3, 3, 0.5);
+    background: url('light.jpg') no-repeat center center/cover;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    background: #9b8989;
+    border-top: 3px solid #fff;
+    border-left: 3px solid #fff;
+    border-right: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    color: #6d633b;
+    text-decoration: underline;
+}
+
+main {
+    padding: 10px;
+    line-height: 1.5;
+}
+
+figure {
+    float: left;
+    margin: 0 20px 1px 1px;
+    border: 2px solid #000000;
+    padding: 2px;
+    border-radius: 10px;
+}
+
+figcaption {
+    font-style: italic;
+    text-align: center;
+}
+
+footer {
+    padding: 1px;
+    text-align: left;
+    color: rgb(150, 81, 81);
+    background-image: url('blue.jpg'); 
+    background-size: 47%;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-clip: content-box;
+}
+    

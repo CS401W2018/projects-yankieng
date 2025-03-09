@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: #6aad96;
+    color: white;
+    text-align: left;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background: #cdda8d;
+    padding: 0.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+.profile-card {
+    background: #eee;
+    text-align: center;
+}
+
+.profile-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+aside {
+    width: 30%;
+    background: #eee;
+    padding: 1rem;
+}
+
+main {
+    text-align: center;
+    flex: 1;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+figcaption {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+}
+
+article {
+    flex: 1;
+    background-color: #ddd;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 5px 5px 4px rgba(31, 31, 31, 0.5);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
