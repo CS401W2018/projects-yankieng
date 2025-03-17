@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engagement - Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <header>
+        <h1>Engagement - Form</h1>
+    </header>
+
+    <main>
+        <form action="processing.html" method="post">
+            <div class="form-row">
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="firstname" placeholder="First Name" required>
+            </div>
+
+            <div class="form-row">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <div class="form-row">
+                <label for="pass">Password:</label>
+                <input type="password" id="pass" name="password">
+            </div>
+
+            <div class="form-row">
+                <label for="state">State:</label>
+                <select name="state" id="state" required>
+                    <option value="" disabled selected>Select a state</option>
+                    <option value="CO">Colorado</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="UT">Utah</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label>Year in School:</label>
+                <label><input type="radio" name="year" value="Freshman"> Freshman</label>
+                <label><input type="radio" name="year" value="Sophomore"> Sophomore</label>
+            </div>
+
+            <div class="form-row">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+
+        <h2>Questions:</h2>
+
+        <h3>1. The form tag has an "action" attribute. What does it do?</h3>
+        <p>The `action` attribute in a `form` tag specifies where to send the form data when submitted.</p>
+
+        <h3>2. The form tag has a "method" attribute. What does it do?</h3>
+        <p>The `method` attribute in a `form` tag controls how the form sends data, using `"GET"` (adds data to the URL) or `"POST"` (hides data).</p>
+
+        <h3>3. What is the difference between a "POST" and a "GET"?</h3>
+        <p>GET adds form data to the URL, making it visible and good for simple requests. <br>POST hides form data in the request body, making it safer for sensitive information.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ting Yan Ng (Yankie)</p>
+    </footer>
+</body>
+</html>
