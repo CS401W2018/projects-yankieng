@@ -16,10 +16,6 @@ legend {
 .form-row input :not([type="submit"]) {
     padding: 5px;
     border-radius: 5px;
-    background-color: wheat;
-}
-
-.form-row input :not([type="submit"]) {
     background-color: #FFF;
 }
 
@@ -34,12 +30,10 @@ legend {
     gap: 10px;
     margin: 10px 0;
 }
-
 .form-row label {
     width: 150px;
     text-align: right;
 }
-
 .form-spacer {
     width: 150px;
     text-align: right;

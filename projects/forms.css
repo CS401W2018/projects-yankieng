@@ -1,9 +1,10 @@
 body {
-    font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: small;
     margin: 0;
     padding: 0;
-    background-color: #262a27;
+    background-color: #2e3430;
+    color: #ffffff;
 }
 
 header, footer {
@@ -11,6 +12,7 @@ header, footer {
     color: rgb(0, 0, 0);
     text-align: center;
     padding: 10px;
+    font-weight: bold;
 }
 
 main {
@@ -19,12 +21,13 @@ main {
     background: rgb(23, 128, 2);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
 }
 
 form {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
 fieldset {
@@ -32,30 +35,55 @@ fieldset {
     border-radius: 5px;
     padding: 15px;
     margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
 }
 
 legend {
     font-weight: bold;
-    color: #000000;
+    color: #ffffff;
+    background: #40a23a;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 label {
-    display: block;
-    margin-top: 10px;
+    display: flex;
+    text-align: left;
+    margin-bottom: 5px;
 }
 
 input, textarea, select {
     width: 100%;
     padding: 8px;
-    margin-top: 5px;
     background-color: #000000;
     border: 1px solid #0dff00;
-    color: #2bff00;
+    color: #5eff00;
     border-radius: 5px;
+    box-sizing: border-box;
 }
 
-input[type="date"] {
-    color: #aea4a4f4;
+.form-row {
+    display: flex;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.form-row label {
+    width: 235px;
+    text-align: left;
+}
+
+.radio-row {
+    display: flex;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+
+
+textarea {
+    resize: vertical;
 }
 
 input[type="radio"], input[type="checkbox"] {
@@ -64,33 +92,40 @@ input[type="radio"], input[type="checkbox"] {
 }
 
 button {
-    background-color: #000;
-    color: rgb(22, 210, 53);
-    padding: 10px;
+    background-color: #20dc16;
+    color: black;
     border: none;
-    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
-    margin-top: 10px;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 5px;
 }
 
 button:hover {
-    background-color: #10e110;
-    color: #000000;
+    background-color: #0fec0f;
 }
 
-/* Responsive Design */
+/* Mobile-friendly styles */
 @media (max-width: 600px) {
     main {
         width: 90%;
+        padding: 15px;
     }
+
     label {
         display: block;
+        margin-bottom: 5px;
     }
+
     input, textarea, select {
         width: 100%;
     }
+
     button {
         width: 100%;
-        font-size: 1.2em;
+        font-size: 18px;
+        padding: 15px;
     }
 }
