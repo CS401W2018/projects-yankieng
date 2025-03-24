@@ -7,14 +7,16 @@
     <link rel="stylesheet" href="form.css">
 </head>
 <body>
+
     <header>
         <h1>Engagement - Form</h1>
     </header>
 
     <main>
-        <form action="processing.html" method="post">
+        <form id="myForm" action="processing.html" method="post">
             <fieldset>
                 <legend>Account Info</legend>
+
                 <div class="form-row">
                     <label for="fullname">Full Name:</label>
                     <input type="text" name="fullname" placeholder="Full Name" id="fullname">
@@ -45,17 +47,23 @@
                     <label><input type="radio" name="year" value="Freshman"> Freshman</label>
                     <label><input type="radio" name="year" value="Sophomore"> Sophomore</label>
                 </div>
+
                 <div class="form-row">
-                    <label><input type="checkbox" name="agree" checked>Remember</label>
+                    <label><input type="checkbox" name="agree" checked> Remember</label>
                 </div>
 
                 <div class="form-row">
-                    <label form="comments">Comments:</label>
+                    <label for="comments">Comments:</label>
                     <textarea name="comments" id="comments"></textarea>
                 </div>
 
                 <div class="form-row">
-                    <div class="form-spacer"></div>
+                    <label>
+                        <input type="checkbox" name="terms" required> I agree to the terms and conditions
+                    </label>
+                </div>
+
+                <div class="form-row">
                     <input type="submit" value="Submit">
                 </div>
             </fieldset>
@@ -65,28 +73,23 @@
     <footer>
         <p>&copy; 2025 Ting Yan Ng (Yankie)</p>
     </footer>
-        <h2>Questions:</h2>
-            <h3>1. What is JavaScript? How did it get its name?</h3>
-            <p>JavaScript is a programming language that makes web pages interactive, and it got its name because Netscape wanted to ride on Java’s popularity, even though the two languages are not related.</p>
-            <h3>2. What are the two ways you can run JavaScript?</h3>
-            <p>You can run in the DOM or install "node.js" (Express.js).</p>
-            <h3>3. What was the most popular front-end js library?</h3>
-            <p>The most popular front-end JavaScript library has been "React.js" which developed by Facebook (Meta).</p>
-            <h3>4. What is the most popular front-end js library today?</h3>
-            <p>Nowadays, "React.js" is still the most popular front-end JavaScript library, followed by "Vue.js", "Angular", and "Svelte".</p>
 
+    <h2>Questions:</h2>
+    
+    <h3>1. What is JavaScript? How did it get its name?</h3>
+    <p>JavaScript is a programming language that makes web pages interactive. It got its name because Netscape wanted to ride on Java’s popularity, even though the two languages are not related.</p>
 
-                <label>
-                    <input type="checkbox" name="terms" required> I agree to the terms and conditions
-                </label>
-            </fieldset>
-            <button type="submit">Submit</button>
-    </main>
-    <footer>
-        <p>&copy; 2025 Ting Yan Ng (Yankie)</p>
-    </footer>
+    <h3>2. What are the two ways you can run JavaScript?</h3>
+    <p>You can run it in the DOM or install "Node.js" (e.g., Express.js).</p>
+
+    <h3>3. What was the most popular front-end JavaScript library?</h3>
+    <p>The most popular front-end JavaScript library has been "React.js," developed by Facebook (Meta).</p>
+
+    <h3>4. What is the most popular front-end JavaScript library today?</h3>
+    <p>Nowadays, "React.js" is still the most popular front-end JavaScript library, followed by "Vue.js," "Angular," and "Svelte."</p>
+
     <script>
-        document.getElementById('myForm').addEventListener('submint',function(event){
+        document.getElementById('myForm').addEventListener('submit', function(event) {
             event.preventDefault();
 
             const fullname = document.getElementById('fullname').value;
@@ -98,8 +101,13 @@
                 return;
             }
 
-            if (!age || age<18) {
-                alert("You need to be 18");
+            if (!email) {
+                alert("You need to enter your email.");
+                return;
+            }
+
+            if (!pass) {
+                alert("You need to enter a password.");
                 return;
             }
 
@@ -110,8 +118,10 @@
             };
 
             console.log(formData);
-
+            alert("Form submitted successfully!");
+            this.submit(); // Proceed with actual form submission
         });
     </script>
+
 </body>
 </html>
