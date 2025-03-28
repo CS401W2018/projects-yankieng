@@ -74,26 +74,54 @@
     </footer>
     <script>
         document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
             const formData = {
-                firstName: firstName,
-                lastName: lastName,
+                fullName: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                dob: document.getElementById('dob').value,
                 password: document.getElementById('password').value,
-                remember: document.getElementById('remember').value,
-                state: document.getElementById('state').value,
-                class: document.getElementById('input[name="class"]').value,
+                bio: document.getElementById('bio').value,
+                gender: document.querySelector('input[name="gender"]:checked')?.value || "Not specified",
+                favoriteSong: document.getElementById('song').value,
+                termsAccepted: document.getElementById('terms').checked
             };
-            console.log(formData);
+
+            console.log("Form Data:", formData);
+
+
+            if (!formData.fullName || !formData.email || !formData.phone) {
+                alert("Please fill in all required fields.");
+                return;
+            }
+
+           
+            const dob = new Date(formData.dob);
+            const minDate = new Date();
+            minDate.setFullYear(minDate.getFullYear() - 13);
+            if (dob > minDate) {
+                alert("You must be at least 13 years old to register.");
+                return;
+            }
+
+            
             const xhr = new XMLHttpRequest();
-            xhr.open("GET", "submit.json", true);
+            xhr.open("GET", "submit.json", true); 
             xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+
             xhr.onreadystatechange = function () {
-                if (xhr.readyState == 4 && xhr.status === 200){
-                    alert('Form submitted successfully.');
-                } else if (xhr.readyState === 4) {
-                    alert('Error submitting form.');
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        alert('Form submitted successfully.');
+                        document.getElementById('myForm').reset(); 
+                    } else {
+                        alert('Error submitting form.');
+                    }
                 }
             };
-            xhr.send(JSON.stringify(formDate));
+
+            xhr.send();
         });
     </script>
 </body>
