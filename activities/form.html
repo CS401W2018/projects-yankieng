@@ -76,27 +76,37 @@
 
     <h2>Questions:</h2>
     
-    <h3>1. What is JavaScript? How did it get its name?</h3>
-    <p>JavaScript is a programming language that makes web pages interactive. It got its name because Netscape wanted to ride on Java’s popularity, even though the two languages are not related.</p>
-
-    <h3>2. What are the two ways you can run JavaScript?</h3>
-    <p>You can run it in the DOM or install "Node.js" (e.g., Express.js).</p>
-
-    <h3>3. What was the most popular front-end JavaScript library?</h3>
-    <p>The most popular front-end JavaScript library has been "React.js," developed by Facebook (Meta).</p>
-
-    <h3>4. What is the most popular front-end JavaScript library today?</h3>
-    <p>Nowadays, "React.js" is still the most popular front-end JavaScript library, followed by "Vue.js," "Angular," and "Svelte."</p>
+    <h3>1. What is AJAX?</h3>
+    <p>AJAX is a web development technique that allows a webpage to send and receive data from a server without reloading the entire page. </p>
+    <h3>2. Why do you put your JS Code in a separate file?</h3>
+    <p>Because when you do this can makes your project faster, more secure, organized, and scalable.</p>
 
     <script>
         document.getElementById('myForm').addEventListener('submit', function(event) {
-            event.preventDefault();
+            const formData = {
+                firstName: firstName,
+                lastName: lastName,
+                password: document.getElementById('password').value,
+                remember: document.getElementById('remember').value,
+                state: document.getElementById('state').value,
+                class: document.getElementById('input[name="class"]').value,
+            };
+            console.log(formData);
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", "submit.json", true);
+            xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status === 200){
+                    alert('Form submitted successfully.');
+                } else if (xhr.readyState === 4) {
+                    alert('Error submitting form.');
+                }
+            };
+            xhr.send(JSON.stringify(formDate));
+        });
 
-            const fullname = document.getElementById('fullname').value;
-            const email = document.getElementById('email').value;
-            const pass = document.getElementById('pass').value;
 
-            if (!fullname) {
+            if (!fullname || !lastname) {
                 alert("You need to enter your name.");
                 return;
             }
@@ -120,7 +130,7 @@
             console.log(formData);
             alert("Form submitted successfully!");
             this.submit(); // Proceed with actual form submission
-        });
+        
     </script>
 
 </body>
