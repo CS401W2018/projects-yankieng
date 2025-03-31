@@ -7,12 +7,20 @@ body {
     color: #ffffff;
 }
 
-header, footer {
+header {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: #00ff00af;
     color: rgb(0, 0, 0);
     text-align: center;
     padding: 10px;
     font-weight: bold;
+    font-size: large;
+}
+
+footer {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ffffff;
+    font-size: medium
 }
 
 main {
@@ -113,6 +121,11 @@ button:hover {
         padding: 15px;
     }
 
+    .form-row {
+        flex-direction: column;
+        gap: 10px; /* Adjust spacing for a cleaner vertical layout */
+    }
+
     label {
         display: block;
         margin-bottom: 5px;
@@ -128,3 +141,4 @@ button:hover {
         padding: 15px;
     }
 }
+
