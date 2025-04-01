@@ -1,6 +1,6 @@
 document.getElementById('myForm').addEventListener('submit', function(event) {
     event.preventDefault(); 
-    const full = document.getElementById('name').value;  // Changed 'fullName' to 'name'
+    const full = document.getElementById('name').value;  
     const email = document.getElementById('email').value;
     const age = document.getElementById('age').value;
 
@@ -21,7 +21,7 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
     }
 
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", "submit.json", true);  // Changed method to "POST"
+    xhr.open("POST", "forms.json", true); 
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
