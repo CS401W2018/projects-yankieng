@@ -1,6 +1,6 @@
 document.getElementById('myForm').addEventListener('submit', function(event) {
     event.preventDefault(); 
-    const full = document.getElementById('fullName').value;
+    const full = document.getElementById('name').value;  // Changed 'fullName' to 'name'
     const email = document.getElementById('email').value;
     const age = document.getElementById('age').value;
 
@@ -21,11 +21,11 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
     }
 
     const xhr = new XMLHttpRequest();
-    xhr.open("GET", "submit.json", true); 
+    xhr.open("POST", "submit.json", true);  // Changed method to "POST"
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
-            const response =JSON.parse(xhr.responseText);
+            const response = JSON.parse(xhr.responseText);
             document.getElementById("message").innerHTML = response.message;
             document.getElementById('myForm').innerHTML = "";
         } else if (xhr.readyState === 4) {

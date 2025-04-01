@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Billie Eilish Fans Meeting Form</title>
     <link rel="stylesheet" href="forms.css">
-    
-    <script defer src="forms.js"></script>
 </head>
 <body>
     <header>
         <h1>Registration Form for Billie Eilish Fans Meeting</h1>
     </header>
     <main>
+        <div id="message"></div>
         <form id="myForm" action="processing.html" method="post">
             <fieldset>
                 <legend>Personal Information</legend>
@@ -33,7 +32,8 @@
 
                 <div class="form-row">
                     <label for="age">Age:</label>
-                    <input type="age" id="age" name="age" required>
+                    <!-- Fixed the input type to "number" -->
+                    <input type="number" id="age" name="age" required>
                 </div>
 
                 <div class="form-row">
@@ -70,7 +70,7 @@
                     <input type="checkbox" name="terms" required> I agree to the terms and conditions
                 </label>
             </fieldset>
-            <button type="submit">Submit</button>
+            <input type="submit">
         </form>
     </main>
     <footer>
