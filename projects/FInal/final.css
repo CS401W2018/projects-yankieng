@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: #0ba8eb;
+    color: white;
+    text-align: left;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background: #5817b3;
+    padding: 0.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+.profile-card {
+    background: #eee;
+    text-align: center;
+}
+
+.profile-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+aside {
+    width: 30%;
+    background: #eee;
+    padding: 1rem;
+}
+
+main {
+    text-align: left;
+    flex: 1;
+    padding: 1rem;
+    display: grid;
+    gap: 1rem;
+}
+
+figcaption {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+}
+
+article {
+    flex: 1;
+    background-color: #ddd;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 5px 5px 4px rgba(31, 31, 31, 0.5);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 700px) {
+
+    nav {
+        display: flex;
+        flex-direction: column; 
+        align-items: left;  
+        background: #4620a7;
+        padding: 0.5rem;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;  
+        text-align: left;  
+        width: 100%; 
+    }
+    
+    nav ul {
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+    }
+    .container {
+        display: flex; 
+        flex-direction: column;
+    }
+
+    .profile-card {
+        background: #eee;
+        text-align: center;
+    }
+
+    aside {
+        max-width: 100%;
+        order: 4; 
+    }
+}
+
+@media print {
+    nav, footer {
+        display: none; 
+    }
+}
