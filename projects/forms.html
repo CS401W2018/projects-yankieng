@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Billie Eilish Fans Meeting Form</title>
     <link rel="stylesheet" href="forms.css">
+    
+    <script defer src="forms.js"></script>
 </head>
 <body>
     <header>
         <h1>Registration Form for Billie Eilish Fans Meeting</h1>
     </header>
     <main>
+        <form id="myForm" action="processing.html" method="post">
             <fieldset>
                 <legend>Personal Information</legend>
                 <div class="form-row">
@@ -29,8 +32,8 @@
                 </div>
 
                 <div class="form-row">
-                    <label for="dob">Date of Birth:</label>
-                    <input type="date" id="dob" name="dob" required>
+                    <label for="age">Age:</label>
+                    <input type="age" id="age" name="age" required>
                 </div>
 
                 <div class="form-row">
@@ -68,61 +71,11 @@
                 </label>
             </fieldset>
             <button type="submit">Submit</button>
+        </form>
     </main>
     <footer>
         <p>&copy; 2025 Ting Yan Ng (Yankie)</p>
     </footer>
-    <script>
-        document.getElementById('myForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            const formData = {
-                fullName: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                dob: document.getElementById('dob').value,
-                password: document.getElementById('password').value,
-                bio: document.getElementById('bio').value,
-                gender: document.querySelector('input[name="gender"]:checked')?.value || "Not specified",
-                favoriteSong: document.getElementById('song').value,
-                termsAccepted: document.getElementById('terms').checked
-            };
-
-            console.log("Form Data:", formData);
-
-
-            if (!formData.fullName || !formData.email || !formData.phone) {
-                alert("Please fill in all required fields.");
-                return;
-            }
-
-           
-            const dob = new Date(formData.dob);
-            const minDate = new Date();
-            minDate.setFullYear(minDate.getFullYear() - 13);
-            if (dob > minDate) {
-                alert("You must be at least 13 years old to register.");
-                return;
-            }
-
-            
-            const xhr = new XMLHttpRequest();
-            xhr.open("GET", "submit.json", true); 
-            xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4) {
-                    if (xhr.status === 200) {
-                        alert('Form submitted successfully.');
-                        document.getElementById('myForm').reset(); 
-                    } else {
-                        alert('Error submitting form.');
-                    }
-                }
-            };
-
-            xhr.send();
-        });
-    </script>
+    <script src="forms.js"></script>
 </body>
 </html>
