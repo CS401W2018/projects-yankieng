@@ -5,6 +5,7 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
+    background-color: #8c86c4
 }
 
 header {
@@ -23,7 +24,7 @@ nav {
 }
 
 nav a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     padding: 0.5rem;
     border-radius: 4px;
@@ -62,16 +63,17 @@ main {
     padding: 1rem;
     display: grid;
     gap: 1rem;
+    color: white;
 }
 
 figcaption {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 article {
     flex: 1;
-    background-color: #ddd;
+    background-color: #ffffff;
     padding: 15px;
     text-align: center;
     box-shadow: 5px 5px 4px rgba(31, 31, 31, 0.5);
@@ -84,18 +86,83 @@ img {
 
 nav .current {
     background-color: white;
-    color: #5817b3;
+    color: #622eaa;
     padding: 0.3rem 0.5rem;
     font-weight: bold;
     border-radius: 5px;
 }
 
+.table-container {
+    overflow-x: auto; 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 5px 5px 4px rgba(30, 30, 30, 0.5);
+}
+
+caption {
+    color: white;
+    font-size: large;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #25b8da;
+    color: rgb(255, 255, 255);
+}
+
+td:nth-child(3) {
+    text-align: center; 
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+tr:hover {
+    background-color: #ddd; 
+}
+
+footer {
+    color: white;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 4px rgba(30, 30, 30, 0.5);
+    margin-left: 10px;
+    border-radius: 5px;
+    border-left: 3px solid #333;
+}
 
 @media (max-width: 700px) {
     nav {
         flex-direction: column; 
         align-items: flex-start;  
         background: #4620a7;
+        align-items: stretch;
+    }
+
+    .nav-link,
+    .nav .current {
+    font-size: 18px;
+    padding: 16px;
     }
 
     nav a {
@@ -106,6 +173,19 @@ nav .current {
 
     .container {
         flex-direction: column;
+    }
+
+    .sidebar {
+        max-width: 100%;
+        margin-left: 0px;
+        border-left: 0px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        box-shadow: 5px 5px 4px rgba(30, 30, 30, 0.5);
     }
 
     aside {
