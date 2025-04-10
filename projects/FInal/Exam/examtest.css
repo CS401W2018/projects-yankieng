@@ -1,0 +1,22 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+}
+
+nav a {
+    display: flex;
+}
+
+div {
+    border: 1px solid;
+    padding: 1px;
+}
+
+.main-class {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.div-class {
+    
+}

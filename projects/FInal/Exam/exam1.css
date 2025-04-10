@@ -1,0 +1,27 @@
+/* Change font for the full page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* NAV styling */
+  nav a {
+    display: block;         /* Makes links vertical */
+    padding: 10px;          /* Adds padding inside the links */
+    text-decoration: none;
+    color: black;
+    background-color: #f0f0f0;
+  }
+  
+  nav a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Styling for the DIVs inside MAIN */
+  main div {
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+  }
+  

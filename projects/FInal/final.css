@@ -5,7 +5,7 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: #8c86c4
+    background-color: #8c86c4;
 }
 
 header {
@@ -62,20 +62,21 @@ main {
     flex: 1;
     padding: 1rem;
     display: grid;
-    gap: 1rem;
     color: white;
 }
 
 figcaption {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 20px;
+    color: white;
 }
 
 article {
     flex: 1;
-    background-color: #ffffff;
+    background-color: #0a91e0;
+    color: white;
     padding: 15px;
-    text-align: center;
+    text-align: left;
     box-shadow: 5px 5px 4px rgba(31, 31, 31, 0.5);
 }
 
@@ -135,6 +136,90 @@ tr:hover {
     background-color: #ddd; 
 }
 
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+fieldset {
+    border: 2px solid #000000;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+legend {
+    font-weight: bold;
+    color: #ffffff;
+    background: #11b8d2;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+label {
+    display: flex;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 8px;
+    background-color: #ffffff;
+    border: 1px solid #00e1ff;
+    color: #000000;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.form-row label {
+    width: 235px;
+    text-align: left;
+}
+
+.radio-row {
+    display: flex;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+
+textarea {
+    resize: vertical;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+button {
+    background-color: #0ed3bc;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #00ffff;
+}
+
+
 footer {
     color: white;
 }
@@ -185,7 +270,7 @@ footer {
         width: 100%;
         border-collapse: collapse;
         margin-top: 20px;
-        box-shadow: 5px 5px 4px rgba(30, 30, 30, 0.5);
+        box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
     }
 
     aside {

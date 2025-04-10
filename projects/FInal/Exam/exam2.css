@@ -1,0 +1,47 @@
+/* Full page font and size */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Flex navigation */
+  #main-nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+  }
+  
+  #main-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+  }
+  
+  #main-nav a:hover {
+    background-color: #555;
+  }
+  
+  /* Grid for main content */
+  .content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Styling for each box */
+  .info-box {
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #f9f9f9;
+  }
+  
+  /* ID example with different styling */
+  #special-box {
+    border: 2px dashed #0077cc;
+    background-color: #e6f7ff;
+    padding: 15px;
+  }
+  
