@@ -10,20 +10,20 @@
 
 <body>
     <header>
-        <h1>Form</h1>
+        <h1>📝Form📋</h1>
     </header>
 
     <nav class="nav">
         <a class="nav-link" href="final.html">Home</a>
         <a class="nav-link" href="one.html">Vote Table</a>
-        <span class="current" href="two.html">Form</span>
+        <span class="current">Form</span>
         <a class="nav-link" href="three.html">Sushi & Sashimi</a>
         <a class="nav-link" href="four.html">Sichuan Cuisine</a>
         <a class="nav-link" href="five.html">Seafood</a>
         <a class="nav-link" href="six.html">Ice Cream</a>
-      </nav>
+    </nav>
 
-      <main>
+    <main>
         <div id="message"></div>
         <form id="myForm" action="processing.php" method="post">
             <fieldset>
@@ -59,13 +59,10 @@
                     <label><input type="radio" name="gender" value="female"> Female</label>
                     <label><input type="radio" name="gender" value="other"> Other</label>
                 </div>
-
             </fieldset>
             
             <fieldset>
-                
                 <legend>Preferences</legend>
-
                 <div class="form-row">
                     <label for="food">Select your favorite food from my favorite food's list:</label>
                     <select id="food" name="food" required>
@@ -76,15 +73,17 @@
                         <option value="seafood">Seafood</option>
                     </select>
                 </div>
-                
 
-                <label>
-                    <input type="checkbox" name="terms" required> I agree to the terms and conditions
-                </label>
+                <div class="form-row">
+                    <label>
+                        <input type="checkbox" name="terms" required> I agree to the terms and conditions
+                    </label>
+                </div>
             </fieldset>
-            <input type="submit">
-        </form>
 
+            <input type="submit" value="Submit">
+        </form>
+    </main>
 
     <footer>
         <p>&copy; 2025 Ting Yan Ng (Yankie)</p>

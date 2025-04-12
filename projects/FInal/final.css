@@ -11,7 +11,7 @@ body {
 header {
     background: #0ba8eb;
     color: white;
-    text-align: left;
+    text-align: center;
     padding: 1rem;
 }
 
@@ -65,6 +65,19 @@ main {
     color: white;
 }
 
+.figure-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+    flex-wrap: wrap; 
+  }
+  
+  .figure-row figure {
+    text-align: center; 
+    max-width: 300px; 
+  }
+  
+
 figcaption {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 20px;
@@ -85,6 +98,10 @@ img {
     height: auto;
 }
 
+#id {
+    margin-bottom: 20px;
+}
+
 nav .current {
     background-color: white;
     color: #622eaa;
@@ -101,7 +118,9 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    margin-left: 400px;
     box-shadow: 5px 5px 4px rgba(30, 30, 30, 0.5);
+    text-align: center;
 }
 
 caption {
@@ -224,6 +243,7 @@ footer {
     color: white;
 }
 
+
 .sidebar {
     flex: 1;
     background-color: #f4f4f4;
@@ -231,9 +251,11 @@ footer {
     display: flex;
     flex-direction: column;
     box-shadow: 5px 5px 4px rgba(30, 30, 30, 0.5);
-    margin-left: 10px;
     border-radius: 5px;
-    border-left: 3px solid #333;
+    max-width: 100%;
+    margin-left: 0px;
+    border-left: 0px;
+    height: 200px;
 }
 
 @media (max-width: 700px) {
@@ -260,7 +282,15 @@ footer {
         flex-direction: column;
     }
 
+
     .sidebar {
+        flex: 1;
+        background-color: #f4f4f4;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 5px 5px 4px rgba(30, 30, 30, 0.5);
+        border-radius: 5px;
         max-width: 100%;
         margin-left: 0px;
         border-left: 0px;
@@ -270,6 +300,7 @@ footer {
         width: 100%;
         border-collapse: collapse;
         margin-top: 20px;
+        margin-left: 0;
         box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
     }
 
